@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.14" />
+    <PackageReference Include="System.CommandLine" Version="2.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NenTools\NenTools.IO.Compression\NenTools.IO.Compression.csproj" />
+    <ProjectReference Include="..\NenTools\NenTools.IO.Streams\NenTools.IO.Streams.csproj" />
+    <ProjectReference Include="..\SolAvesTools.Shared\SolAvesTools.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="hash_paths.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

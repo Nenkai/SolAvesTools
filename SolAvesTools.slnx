@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="NenTools/NenTools.IO.Compression/NenTools.IO.Compression.csproj" />
+  <Project Path="NenTools/NenTools.IO.Streams/NenTools.IO.Streams.csproj" />
+  <Project Path="NenTools/NenTools.Utils/NenTools.Utils.csproj" />
+  <Project Path="NenTools/ZStd/ImpromptuNinjas.ZStd/ImpromptuNinjas.ZStd.csproj" />
+  <Project Path="SolAvesTools.CLI/SolAvesTools.CLI.csproj" />
+  <Project Path="SolAvesTools.Assets/SolAvesTools.Assets.csproj"/>
+  <Project Path="SolAvesTools.Files/SolAvesTools.Files.csproj"/>
+  <Project Path="SolAvesTools.Shared/SolAvesTools.Shared.csproj"/>
+</Solution>

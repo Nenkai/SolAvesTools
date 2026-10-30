@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MessagePack" Version="3.1.12" />
+		<PackageReference Include="System.IO.Hashing" Version="10.0.14" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\NenTools\NenTools.IO.Streams\NenTools.IO.Streams.csproj" />
+	</ItemGroup>
+</Project>
