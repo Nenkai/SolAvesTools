@@ -42,6 +42,10 @@ The game has a clear design in being multiplatform. Many PC features and editor 
 * [ ] Save file decryption.
 * [ ] Release path hashes.
 
+## Building & Licensing
+
+MIT, however AI usage is unwelcome.
+
 ## Credits
 
 * mvit, for doing the bulk of the initial reversing of the hash algorithm, and hash finding.
