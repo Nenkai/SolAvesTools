@@ -32,6 +32,7 @@ The game has a clear design in being multiplatform. Many PC features and editor 
 
 * `Aurora` - Renderer?
 * `Nitro` - Asset Build System
+* `Phoenix` - Internal/Previous name of the engine before SOL-AVES, the Phoenix can still be seen as the SOL-AVES logo.
 * `Sygnus` - Sound Engine, superseeding NuSound
 * `Ruby` - ? - Text or GUI related.
 
@@ -48,4 +49,4 @@ MIT, however AI usage is unwelcome.
 
 ## Credits
 
-* mvit, for doing the bulk of the initial reversing of the hash algorithm, and hash finding.
+* mvit, for doing the bulk of the initial reversing of the assets and the custom hash algorithm, and hash finding.
