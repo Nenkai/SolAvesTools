@@ -1,0 +1,102 @@
+﻿namespace SolAvesTools.Files.FlatBuffers;
+
+union AssetData 
+{ 
+	SoundAsset // Type 1
+}
+
+table PhoenixSoundFile 
+{
+  unused_1: int;
+  unused_2: int;
+  asset: AssetData;
+  table_4: [Root_Table4];
+}
+
+// map<uint32, uint64>
+table Root_Table4 
+{
+  key: uint;
+  hash: ulong;
+}
+
+table SoundAsset 
+{
+  unused_1: int;
+  asset_dependencies: [AssetDependency];
+  hash_unk: ulong;
+  file_size: uint;
+  file_offset: uint;
+  table_6: SoundAsset_Table6;
+  table_7: SoundAsset_Table7;
+  sound_file_info: SoundFileInfo;
+  table_9: SoundAsset_Table9;
+}
+
+table AssetDependency 
+{
+  unused_1: uint;
+  asset_id: ulong;
+}
+
+table SoundAsset_Table6 
+{
+  unused_1: int;
+  playback: SoundAsset_Table6_Table2;
+  range: SoundAsset_Table6_Table3;
+}
+
+table SoundAsset_Table6_Table2 
+{
+  unused_1: int;
+  field_2: int;
+  field_3: int;
+  field_4: long; 
+  field_5: bool;
+}
+
+table SoundAsset_Table6_Table3 
+{
+  unused_1: int;
+  field_2: int;
+  field_3: int;
+}
+
+table SoundAsset_Table7 
+{
+  unused_1: int;
+  value: ulong;
+}
+
+table SoundFileInfo 
+{
+  unused_1: int;
+  field_2: int;
+
+  // Asset.Streaming/Sound/<folder_number>/AudioSource/Aurora/<file_name>.soundstream
+  has_external_soundstream_file: bool;
+  folder_number: ulong; 
+  file_name: string; // Guid
+}
+
+table SoundAsset_Table9 
+{
+  unused_1: int;
+  entries: [SoundAsset_Table9_Table2];
+}
+
+table SoundAsset_Table9_Table2 {
+  unused_1: int;
+  key: ulong;
+  field_2: uint; // Value?
+  field_3: [SoundAsset_Table9_Table2_Table4];
+}
+
+table SoundAsset_Table9_Table2_Table4 {
+  unused_1: int;
+  field_2: float; // sort key
+  field_3: uint;  // may be float
+}
+
+root_type PhoenixSoundFile;
+file_identifier "PSND";
