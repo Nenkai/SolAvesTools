@@ -16,7 +16,7 @@ This engine is used in:
 
 ## Engine Reverse-Engineering Notes
 
-## Assets
+### Assets
 
 The vast majority of the engine's and game's strings are hashed with a custom variant of XXH3 by design. Paths, strings, everything. Please refer to this [CEDEC lecture](https://cedil.cesa.or.jp/cedil_sessions/view/3389).
 
@@ -24,17 +24,33 @@ This makes navigating the game files very tedious. Bear that in mind.
 
 The vast majority of the extracted game assets makes uses of FlatBuffers.
 
-## PC Compatibility
+#### Asset Providers
+
+The game supports 4 asset providers that are used by presets in `config.bin`:
+
+* `Remote`
+* `LocalArchive` (default) - `startup.dat` defines the folder name to use through `local_archive_provider`.
+* `NitroLocal`
+* `Local`
+
+For presets, the default one used in release mode is `archive`.
+
+### PC Compatibility
 
 The game has a clear design in being multiplatform. Many PC features and editor features are referenced within the config file and command line arguments.
 
-## Glossary
+### Glossary
 
-* `Aurora` - Renderer?
+* `Aurora` - Build Environment? Renderer? Unclear.
 * `Nitro` - Asset Build System
 * `Phoenix` - Internal/Previous name of the engine before SOL-AVES, the Phoenix can still be seen as the SOL-AVES logo.
-* `Sygnus` - Sound Engine, superseeding NuSound
+* `Prism` - Schema (schema.bin) System/File for their [ECS](https://en.wikipedia.org/wiki/Entity_component_system)
 * `Ruby` - ? - Text or GUI related.
+* `Sygnus` - Sound Engine, superseeding NuSound. Most Sygnus functions use the `Result` pattern/return a `Result` object.
+
+### Templates
+
+Some 010 Editor Templates can be found [here](https://github.com/Nenkai/010GameTemplates/tree/main/Bandai%20Namco/SOL-AVES).
 
 ## TODO
 
